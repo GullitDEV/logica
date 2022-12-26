@@ -1,0 +1,88 @@
+
+Bacharelado em Ciência da Computação
+Prof. Me. Claudiney R. Tinoco
+Disciplina: Lógica para Computação 
+Aluno: Gullit Damião Teixeira de Campos. 
+
+
+---------------------------------------------------------------------
+
+~P equivale (P nand P)
+(P v Q) equivale a ((P nand P) nand (Q nand Q)
+(P^Q) e ~(~Pv~Q) equivale ~(P^Q) 
+
+---------------------------------------------------------------------------
+((P-->Q) ^ (Q-->p)) v (R--> S)
+((~P v Q) ^ (~QvP)) v (~RvS)
+~(~((~PvQ) ^ (~QvP)) v (~RvS)
+~(~(~PvQ) v ~(~(QvP)) v (~RvS)
+((~PvQ) v (~QvP)) v (~RvS) 
+---------------------------------------------------------------------------
+P^(~RvS)
+~(~(P^(~RvS))
+~(~Pv~(~RvS))
+Pv(~RvS)
+Pv((RnandR)nand(RnandR))nand(SnandS))
+(PnandP)nand((((RnandR)nand(RnandR)nand(SnandS))nand(((RnandR)nand(RnandR))nand(5nand5)))
+
+----------------------------------------------------------------------------
+~(P^Q)-->R
+
+FND = (P^Q^R)v(P^Q^R)v(P^~Q^R)v(P^Q^R)v(~P^Q^R)
+FNC = (Pv~QvR)^(~PvQvR)^(PvQvR)^(PvQvR)
+
+----------------------------------------------------------------------------
+Dada a fórmula
+H = ((P-->Q)^(~Q<-->R))<-->(~R^~P) 
+
+H = ((P-->Q)^(~Q<-->R))<-->(~R^~P)
+~((~PvQ)^((~Q-->R)^(R-->~Q)))<-->(~R^~P)
+((~PvQ)^((QvR)^(~Rv~Q)))<-->(~R^~P)
+((~PvQ)v((QvR)v(~Rv~Q)))<-->(~R^~P)
+((~PvQ)v((QvR)v(~Rv~Q)))-->(~R^~P)^((~R^~P)-->(((~PvQ)v((QvR)v(~Rv~Q))))
+(~((~PvQ)v((QvR)v(~Rv~Q)))v(~R^~P)v(~(~R^~P)v(((~PvQ)v((QvR)v(~Rv~Q))))
+-----------------------------------------------------------------------
+FND = (P^Q^R)v(P^Q^~R)v(P^~Q^R)v(P^~Q^~R)v(~P^Q^~R)v(~P^~Q^R)
+FNC = (Pv~Qv~R)^(P^Q^R)
+---------------------------------------------------------------------
+I - ( P v ~P)
+Ax1 = ~(P v P) --> (P v P) --> P
+--------------------------------------------------------------------
+Prove P, B = {~S --> P, R v ~P, ~S}
+
+MP em (3) E ( 1):
+
+MP = (~S, ~S-->P)/P --> Resposta desejada. 
+----------------------------------------------------------------------
+~PvQ  (1)		(1) = P --> Q
+Q-->R (2)		(3) = ~RvS = R-->S
+Sv~R  (3)
+P(4)
+
+MP em (4) e (1)
+Q(5)
+
+MP em 	(6) e (3):
+	(5)->Resposta. 
+-------------------------------------------------------------------------
+P-->~Q
+~Q --> R
+P -- R
+
+Por Silogismo Hipotetico
+ 
+(p-->~Q)^(~Q-->R)=>P-->R
+
+-------------------------------------------------------------------------
+
+P --> Q
+~P --> R
+R --> S
+
+E conclusão: ~Q --> S
+
+~P-->R^R-->S =>~P-->S
+se P -->Q, então por contrapositiva ~Q-->~P
+~Q --> ~P^~P-->S => ~Q-->S
+-------------------------------------------------------------------------
+
